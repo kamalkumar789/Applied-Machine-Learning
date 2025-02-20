@@ -17,3 +17,9 @@ grey_img = np.uint8(grey_img)
 cv2.imshow("Grayscale Image", grey_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+_, binary = cv2.threshold(grey_img, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("Binary", binary)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
